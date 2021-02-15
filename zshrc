@@ -33,7 +33,7 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
 # Load virtualenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-pyenv activate data 2>/dev/null && echo "🐍 Loading 'data' virtualenv"
+pyenv activate data 2>/dev/null && echo "🐍 Loading 'data' virtualenv 🚀"
 
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
@@ -43,3 +43,23 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+
+# Aliases below
+
+# Get External IP / Internet Speed
+alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+
+# Quickly serve the current directory as HTTP
+alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
+
+# Jupyter aliases
+alias julab='jupyter lab'
+alias juno='jupyter notebook'
+
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+
